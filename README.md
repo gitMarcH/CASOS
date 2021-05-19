@@ -15,7 +15,7 @@ where "path" is the directory in which you have saved the R file.
 You will need to install the RANN library (needed for finding the nearest neighbours for LOF).
 
 
-## USAGE:
+## USAGE
 
 To run CASOS is a two-stage process: first you need to run CASOS(...) to compute anomaly scores in all subspaces of a certain dimensionality, then CASOS.combine(...) to combine these to a single anomaly score per object.
 If LOF is used as anomaly score computation method, then the AS matrix for subspaces of dimensionality np (parameter D from the CASOS paper) is the np^th element of the list $LOF.sc, and can be retrieved by $LOF.sc[[np]].
@@ -26,7 +26,7 @@ ASresults<-CASOS(X=data,np=3,k=100)
 AScombined<-CASOS.combine(ASresults$LOF.sc[[3]],combfun=Comb.Ext)
 
 
-## PARAMETERS:
+## PARAMETERS
 
   (a) CASOS(X,X.weight=NULL,weight.scheme=NULL,np=3,ASmethod="LOF",k=5,h=1,standardise=TRUE,do.all.dim=FALSE)
 
